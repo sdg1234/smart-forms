@@ -68,7 +68,7 @@ function speaking(el) {
       console.log(event);
       var text = event.results["0"]["0"].transcript;
       $('#m').val(text);
-      $('#jane-questions').val(text);
+      //$('#jane-questions').val(text);
       letsgo('voice');
     }
     recognition.onerror = function(event) { 
@@ -205,7 +205,7 @@ socket.on('message', function(msg, response){
     }    
   }
   // $('#messages').append($('<li>').text("JANE: "+msg+""));
-  // $('#jane-questions').text(msg);
+  $('#jane-questions').text(msg);
   $("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 1);
   if(inputType == 'voice') {
     formSpeakfill(msg);
