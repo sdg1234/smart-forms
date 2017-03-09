@@ -1,0 +1,8 @@
+
+{
+  "name": "smart-forms",
+  "description": "smart-formsm",
+  "repository": "https://github.com/sdg1234/smart-forms",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
