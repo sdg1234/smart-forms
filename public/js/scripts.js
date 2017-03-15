@@ -501,7 +501,7 @@ socket.on('product response', function(msg, response){
   console.log(response);
   formSpeaks(msg);
   var planFor = "plan-for";
-  if(msg == 'what is sumassured') {
+  if(msg == 'Select a policy, and then select sum assured and payment mode.') {
     targetUser = response.result.parameters[planFor];
   } else {
     targetUser = null;
