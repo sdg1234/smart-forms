@@ -157,11 +157,13 @@ socket.on('message', function(msg, response){
         if(response.result.parameters[key].amount != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key].amount);
+          $('#personal-details').focus();
         }        
       } else {
         if(response.result.parameters[key] != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key]);
+          $('#personal-details').focus();
         }        
       }
     }
@@ -176,11 +178,13 @@ socket.on('message', function(msg, response){
         if(response.result.parameters[key].amount != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key].amount);
+          $('#personal-details').focus();
         }        
       } else {
         if(response.result.parameters[key] != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key]);
+          $('#personal-details').focus();
         }        
       }
     }
@@ -195,11 +199,13 @@ socket.on('message', function(msg, response){
         if(response.result.parameters[key].amount != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key].amount);
+          $('#personal-details').focus();
         }        
       } else {
         if(response.result.parameters[key] != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key]);
+          $('#personal-details').focus();
         }        
       }
     }    
@@ -221,11 +227,13 @@ socket.on('success', function(msg, response){
         if(response.result.parameters[key].amount != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key].amount);
+          $('#personal-details').focus();
         }        
       } else {
           if(response.result.parameters[key] != '') {
             $(fieldID).focus();
             $(fieldID).val(response.result.parameters[key]);
+            $('#personal-details').focus();
           }  
       }      
       
@@ -238,11 +246,13 @@ socket.on('success', function(msg, response){
         if(response.result.parameters[key].amount != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key].amount);
+          $('#personal-details').focus();
         }        
       } else {
         if(response.result.parameters[key] != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key]);
+          $('#personal-details').focus();
         }        
       }
     }
@@ -254,11 +264,13 @@ socket.on('success', function(msg, response){
         if(response.result.parameters[key].amount != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key].amount);
+          $('#personal-details').focus();
         }        
       } else {
         if(response.result.parameters[key] != '') {
           $(fieldID).focus();
           $(fieldID).val(response.result.parameters[key]);
+          $('#personal-details').focus();
         }        
       }
     }   
