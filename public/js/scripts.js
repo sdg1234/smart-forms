@@ -339,6 +339,12 @@ function check(testtext) {
           dynamic(text, "dynamic-result")
           formSpeaking(text)
       }
+   
+     if(requesttype=="address" && result!= wrongtexts){
+          let text =  "Ok your request has been registered. Here is the reference number 88661  " ;
+          dynamic(text, "dynamic-result")
+          formSpeaking(text)
+      }
   },
   error: function(jqXHR, exception) {
 
@@ -437,6 +443,15 @@ $("#modal3").click(function () {
     $('#voicebot').toggleClass('animated');
     $('#voicebot').toggleClass('zoomInDown');
     requesttype="personal";
+});
+$("#modal5").click(function () {
+    let text = "Please tell us your new address.";
+    formSpeaking(text);
+    dynamic(text, "dynamic-text");    
+    $('#voicebot').toggleClass('hidden');
+    $('#voicebot').toggleClass('animated');
+    $('#voicebot').toggleClass('zoomInDown');
+    requesttype="address";
 });
 $("#closing").click(function () {   
     $('#voicebot').toggleClass('hidden');    
