@@ -444,6 +444,7 @@ $("#modal3").click(function () {
     $('#voicebot').toggleClass('zoomInDown');
     requesttype="personal";
 });
+var addressAction = false;
 $("#modal5").click(function () {
     let text = "Please tell us your new address.";
     formSpeaking(text);
@@ -452,6 +453,7 @@ $("#modal5").click(function () {
     $('#voicebot').toggleClass('animated');
     $('#voicebot').toggleClass('zoomInDown');
     requesttype="address";
+    addressAction = true;
 });
 $("#closing").click(function () {   
     $('#voicebot').toggleClass('hidden');    
@@ -473,7 +475,14 @@ function speaks(el) {
     }
     recognition.onresult = function(event) { 
       console.log(event);
-      check(event.results["0"]["0"].transcript);
+      if(!addressAction) {
+        check(event.results["0"]["0"].transcript);
+      } else {
+        let text =  "Ok your request has been registered. Here is the reference number 88661  " ;
+          dynamic(text, "dynamic-result")
+          formSpeaking(text)
+        addressAction = false;
+      }
     }
     recognition.onerror = function(event) { 
       console.log(event);
